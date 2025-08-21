@@ -10,10 +10,10 @@ This project demonstrates my understanding of how Incidents, Problems, and Chang
   ![Incident Problem Change Relationships](images/Incident_Problem_Change_Relationsships_in_ServiceNow.png)
 
 - Custom Script Action  
-  ![Custom Script Action](images/custom_script_action.png)
+  ![Custom Script Action](images/custom_select_incidents_for_problem_SCRIPT_ACTION.png)
 
 - Create Problem From Incident Flow  
-  ![Create Problem From Incident Flow](images/create_problem_from_incident_flow.png)
+  ![Create Problem From Incident Flow](images/custom_create_problem_for_recurring_incident_FLOW.png)
 
 - New Catalog Item  
   ![New Catalog Item](images/request_software_installation.png)
@@ -29,20 +29,15 @@ Extend the out-of-the-box workflow by automating with Flow Designer.
 
 ### Flow 1: Auto-Create Problem
 
-- **Trigger**: When more than 5 Incidents are created:
+- **Trigger**: Scheduled once a day
+- Script checks if more than 5 Incidents are created:
 
   - On the same CI within 24 hours
   - OR with the same Category and Sub-Category
 
 - **Action**: Auto-create Problem
 
-### Flow 2: Auto-Create Change from Problem
-
-- **Trigger**: When a Problem state changes to **Root Cause Identified**
-
-- **Action**: Auto-create Change request
-
-### Flow 3: Auto-Process Software Installation Requests with CI Check
+### Flow 2: Auto-Process Software Installation Requests with CI Check
 
 - **Catalog Item Name**: **Software Installation Request**
 - **Category**: **IT Services > Software Requests**
@@ -51,15 +46,16 @@ Extend the out-of-the-box workflow by automating with Flow Designer.
 
 #### Trigger
 
-When a new **Software Installation Request** is submitted.
+- When a new **Software Installation Request** is submitted.
 
 #### Actions
 
-1. **Check if CI exists**
-   - The flow queries the CMDB to see if the requested CI is discoverable.
-2. **Conditional Branch**
-   - **If CI exists** → create a task to process the software installation.
-   - **If CI does not exist** → notify the IT team or take an alternative action.
+- Action 1: Check if the selected CI has installed status ‘Installed’, Operational Status is ‘Operational’ and Warranty expiration is empty or greater than today’s date
+  o If yes: Continue processing.
+  o If not: Notify IT team or create a task for CMDB reconciliation.
+- Action 2: Auto-create Request Task for software installation.
+- Action 3: Request approval from software admin.
+- Action 4: Notify the requester once the task is assigned / completed.
 
 #### Benefits
 
