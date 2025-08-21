@@ -16,7 +16,7 @@ This project demonstrates my understanding of how Incidents, Problems, and Chang
   ![Create Problem From Incident Flow](images/custom_create_problem_for_recurring_incident_FLOW.png)
 
 - New Catalog Item  
-  ![New Catalog Item](images/RequestSoftwareInstallation1.jpg)
+  ![New Catalog Item](images/request_software_installation.png)
 
 - Catalog Item Flow  
   ![Catalog Item Flow](images/auto_process_software_installation_requests.png)
@@ -63,11 +63,6 @@ Extend the out-of-the-box workflow by automating with Flow Designer.
 - Reduces errors and manual verification.
 - Provides automated notifications and task creation based on CI availability.
 
-#### Screenshot Idea
-
-- Show the Catalog Item form submitted by a user.
-- Show the flow canvas highlighting the CI check and task creation logic.
-
 ---
 
 ## 📚 Summary
@@ -75,3 +70,24 @@ Extend the out-of-the-box workflow by automating with Flow Designer.
 - Manual processes demonstrate clear record relationships.
 - Automation with Flow Designer reduces manual clicks and repetitive tasks.
 - Great for **training demos, GitHub workflows, and ServiceNow showcase projects**.
+
+## 🛠 Tech Stack
+
+- **ServiceNow ITSM** (Orlando release or higher)
+- **GlideRecord / Server-side scripting**
+- **Catalog Client Scripts & UI Policies**
+- **Script Action in Flow Designer**
+- **Update Sets (XML exports)**
+
+---
+
+## 📥 How to Import
+
+1. Download the update set from:  
+   `/updateset/sys_remote_update_set_e88f78b48367a2107ffb1630ceaad379.xml`
+2. Navigate to **System Update Sets > Retrieved Update Sets** in your ServiceNow instance.
+3. Import and Preview before committing.
+4. Commit to apply all configurations.
+   > ⚠️ Requires **admin role** on your ServiceNow instance.
+
+---
