@@ -16,7 +16,7 @@ This project demonstrates my understanding of how Incidents, Problems, and Chang
   ![Create Problem From Incident Flow](images/custom_create_problem_for_recurring_incident_FLOW.png)
 
 - New Catalog Item  
-  ![New Catalog Item](images/RequestSoftwareInstallation.jpg)
+  ![New Catalog Item](images/RequestSoftwareInstallation1.jpg)
 
 - Catalog Item Flow  
   ![Catalog Item Flow](images/auto_process_software_installation_requests.png)
