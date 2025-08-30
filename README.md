@@ -51,10 +51,10 @@ Extend the out-of-the-box workflow by automating with Flow Designer.
 #### Actions
 
 - Action 1: Check if the selected CI has installed status ‘Installed’, Operational Status is ‘Operational’ and Warranty expiration is empty or greater than today’s date
-  o If yes: Continue processing.
-  o If not: Notify IT team or create a task for CMDB reconciliation.
-- Action 2: Auto-create Request Task for software installation.
-- Action 3: Request approval from software admin.
+  - If yes: Continue processing.
+  - If not: Notify IT team or send an email to requestor.
+- Action 2: Request approval from software admin.
+- Action 3: Create Request Task for software installation.
 - Action 4: Notify the requester once the task is assigned / completed.
 
 #### Benefits
