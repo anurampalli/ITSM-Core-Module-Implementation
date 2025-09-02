@@ -84,7 +84,7 @@ Extend the out-of-the-box workflow by automating with Flow Designer.
 ## 📥 How to Import
 
 1. Download the update set from:  
-   `/updateset/sys_remote_update_set_e88f78b48367a2107ffb1630ceaad379.xml`
+   `/updateset/sys_remote_update_set_587ac5ec833322107ffb1630ceaad3ed.xml`
 2. Navigate to **System Update Sets > Retrieved Update Sets** in your ServiceNow instance.
 3. Import and Preview before committing.
 4. Commit to apply all configurations.
